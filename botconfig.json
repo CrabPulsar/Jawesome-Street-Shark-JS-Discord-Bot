@@ -1,0 +1,7 @@
+{
+    "token": "Your Token Here",
+    "prefix": "Your Prefix here",
+    "ownerID": "Your Discord ID Here",
+    "CAT_API_KEY": "Register for a cat api key from https://api.thecatapi.com/ if you want to use this.",
+    "DOG_API_KEY":"Register for a dog api key from https://api.thedogapi.com/ if you want to use this."
+}

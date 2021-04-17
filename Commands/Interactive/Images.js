@@ -30,8 +30,11 @@ counter = 0
         image: pic
     };
     counter++;
-message.channel.send({embed: iEmbed});
-}
+    try{
+            message.channel.send({embed: iEmbed})
+    } catch(e){
+            console.log("Error finding picture.")
+    }
 m.delete();
 message.delete();}
 module.exports.help = {

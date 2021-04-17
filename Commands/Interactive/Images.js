@@ -9,34 +9,36 @@ if (prefix.currentPrefix.length > 3) {initialLength + 1}
 var msgContent = `${message.content}`.slice(initialLength).trim()
 if (msgContent.startsWith('images')) {msgContent = msgContent.slice(7)} else {msgContent = msgContent.slice(2)}
 function is_number(str){return /[0-9]/.test(str)}
-        if (is_number(args[args.length - 1]) == true){
-            var top = args[args.length - 1];
-            var amount = args[args.length - 1];
-            var search = msgContent.slice(0, -2).trim();
-            } else {
-            var top = 1;
-            var amount = 1;
-            var search = msgContent;
-        }
+if (is_number(args[args.length - 1]) == true){
+    var top = args[args.length - 1];
+    var amount = args[args.length - 1];
+    var search = msgContent.slice(0, -top.length).trim();
+    } else {
+    var top = 1;
+    var amount = 1;
+    var search = msgContent;
+}
 console.log(message.author.username + ` searched for ` +  search + ` ` + amount);
-if(parseInt(amount) > 50) return message.reply("TOO MANY IMAGES STUPID!");
+if(parseInt(amount) > 200) return message.reply("TOO MANY IMAGES STUPID!");
 const m = await message.channel.send("*Loading!!!*");
 const results = await google.scrape(search, amount);
 counter = 0
-    while(counter < top) {
-        var pic = results[counter];     
+while(counter < top) {
+    if(counter == results.length){
+        message.channel.send("No more images are available. Found " + results.length + " images out of " + amount)
+        break
+    }
+    var pic = results[counter];     
     const iEmbed = {
         color: colors["hotpink"],
         image: pic
-    };
+     };
     counter++;
-    try{
-            message.channel.send({embed: iEmbed})
-    } catch(e){
-            console.log("Error finding picture.")
-    }
+    message.channel.send({embed: iEmbed})
+}
 m.delete();
-message.delete();}
+message.delete();
+}
 module.exports.help = {
     name: "images",
     aliases: ["i"],

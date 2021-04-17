@@ -10,17 +10,17 @@ module.exports.run = async (bot, message, args) =>{
         var counter = 1;
         content = `${message.content}`.slice(initialLength).trim()
     } else {
-        content = `${message.content}`.slice(initialLength, -2).trim()
+        content = `${message.content}`.slice(initialLength, -counter.length).trim()
     }
-    if(counter > 50) return message.reply("TOO MANY MESSAGES STUPID!");
+    if(counter > 200) return message.reply("TOO MANY MESSAGES STUPID!");
     while(counter > 0) {
         message.channel.send(content);
         counter--
     }
     message.delete();
     }
-    module.exports.help = {
-        name: "spam",
-        aliases: [],
-        desc: "This command will repeat the message you put in and the amount, however there is a 50 message limit. EX: Jawesome 10 ===> Jawesome Jawesome Jawesome Jawesome Jawesome Jawesome Jawesome Jawesome Jawesome Jawesome."
-    }
+module.exports.help = {
+name: "spam",
+aliases: [],
+desc: "This command will repeat the message you put in and the amount, however there is a 50 message limit. EX: Jawesome 10 ===> Jawesome Jawesome Jawesome Jawesome Jawesome Jawesome Jawesome Jawesome Jawesome Jawesome."
+}

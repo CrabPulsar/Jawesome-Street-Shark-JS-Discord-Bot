@@ -3,7 +3,7 @@ const desc = require("../../index.js");
 const prefix = require("../../index.js");
 module.exports.run = async (bot, message, args) =>{
     if (!args[0]){
-        return message.reply("What command do you need help with?")
+        return message.reply("What command do you need help with? Try using jssc to see the list of recognized commands.")
     }
     var initialLength = prefix.currentPrefix.length
     var input = `${message.content}`.toLowerCase().slice(initialLength + 4).trim()

@@ -1,5 +1,4 @@
-const colors = require("../../colors.json");
-
+const random = require("../../Helper Functions/Random Color");
 module.exports.run = async (bot, message, args) =>{
 const Comembed = {
             title: "Commands",
@@ -17,10 +16,10 @@ const Comembed = {
               value: "• Cat\n• Dog\n• Goose",
               inline: true},
               {name: "**Gifs and Videos:**",
-              value: "• Assad\n• Cyberpunk {2077)\n• Dumb\n• Gif\n• Jawesome\n• Justin\n• NoNSFW\n• Politics\n• Rules\n• SecretSide {ss}\n• Today\n• Turkey\n• Vince\n• Zeb",
+              value: "• Assad\n• Cyberpunk {2077}\n• Dumb\n• Gif\n• Jawesome\n• Justin\n• NSFW\n• Politics\n• Rules\n• SecretSide {ss}\n• Today\n• Turkey\n• Vince\n• Zeb",
               inline: true},
               {name: "**Interactive:**",
-              value: "• Avatar\n• Color\n• Emotify\n• Gray\n• Hello\n• Help\n• Images {i}\n• Spam\n• Userinfo {ui}",
+              value: "• Avatar\n• Color\n• Emotify\n• Gelbooru {g}\n• Gray\n• Hello\n• Help\n• Images {i}\n• Spam\n• Userinfo {ui}",
               inline: true},
               {name: "**Math:**",
               value: "• Factorial {fac}\n• Math {m}",
@@ -32,24 +31,7 @@ const Comembed = {
               icon_url: message.author.avatarURL({dynamic: true})
             }
           };
-      number = 14
-      var random = Math.floor(Math.random() * (number - 1 + 1)) + 1;
-      switch(random){
-        case 1: Comembed.color = `${colors["black"]}`; break;
-        case 2: Comembed.color = `${colors["white"]}`; break;
-        case 3: Comembed.color = `${colors["gray"]}`; break;
-        case 4: Comembed.color = `${colors["brown"]}`; break;
-        case 5: Comembed.color = `${colors["gold"]}`; break;
-        case 6: Comembed.color = `${colors["green"]}`; break;
-        case 7: Comembed.color = `${colors["red"]}`; break;
-        case 8: Comembed.color = `${colors["blue"]}`; break;
-        case 9: Comembed.color = `${colors["purple"]}`; break;
-        case 10: Comembed.color = `${colors["yellow"]}`; break;
-        case 11: Comembed.color = `${colors["orange"]}`; break;
-        case 12: Comembed.color = `${colors["hotpink"]}`; break;
-        case 13: Comembed.color = `${colors["cream"]}`; break;
-        case 14: Comembed.color = `${colors["kewl green"]}`; break;
-      }
+      Comembed.color = `${random.randomColor()}`;
       message.channel.send({embed: Comembed});
       message.delete();
     }

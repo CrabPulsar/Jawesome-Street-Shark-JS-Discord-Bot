@@ -9,8 +9,6 @@ bot.aliases = new Discord.Collection();
 const namedFileDescription = new Map()
 const aliasFileDescription = new Map()
 const filePath = fs.readdirSync("./commands")
-l = filePath.length;
-i = 0;
 function readFiles(set){
     fs.readdir(`./commands/${set}`, (err, files) => {
         if (err) console.log(err);
@@ -37,10 +35,9 @@ function readFiles(set){
         });
     });
 }
-while (i < l){
+while (filePath.length > 0){
     readFiles(filePath[0])
     filePath.shift();
-    i++;
 }
 module.exports.namedFileDescription = namedFileDescription
 module.exports.aliasFileDescription = aliasFileDescription

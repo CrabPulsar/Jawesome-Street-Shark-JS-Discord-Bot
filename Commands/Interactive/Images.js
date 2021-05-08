@@ -1,7 +1,7 @@
 const prefix = require('../../index')
 const colors = require("../../colors.json");
 const Scraper = require('images-scraper');
-const google = new Scraper({puppeteer: {headless: false,}});
+const google = new Scraper({puppeteer: {headless: false}});
 module.exports.run = async (bot, message, args) =>{
 
 var initialLength = prefix.currentPrefix.length
@@ -22,19 +22,22 @@ console.log(message.author.username + ` searched for ` +  search + ` ` + amount)
 if(parseInt(amount) > 200) return message.reply("TOO MANY IMAGES STUPID!");
 const m = await message.channel.send("*Loading!!!*");
 const results = await google.scrape(search, amount);
-counter = 0
+counter = 0;
 while(counter < top) {
     if(counter == results.length){
         message.channel.send("No more images are available. Found " + results.length + " images out of " + amount)
-        break
-    }
+        break;
+    };
     var pic = results[counter];     
     const iEmbed = {
         color: colors["hotpink"],
         image: pic
-     };
+    };
     counter++;
-    message.channel.send({embed: iEmbed})
+    try{message.channel.send({embed: iEmbed})}
+    catch(err){
+        console.log(err)
+    }
 }
 m.delete();
 message.delete();
@@ -44,3 +47,5 @@ module.exports.help = {
     aliases: ["i"],
     desc: "This command will Google whatever you want and any number of images (20 or less). If the thing you are searching for is more than one word, DO NOT USE SPACES. Use underscores. EX: Jawesome_Street_Shark 20 This will search for the first 20 images of Jawesome Street Shark on Google. This command is pretty slow to use. The more images that you request, the longer it will take to send them all."
 }
+
+// In "node_modules\images-scraper\src\google\scraper.js" comment line number 44 if you don't want it to print to the console. I already have this file printing to the console, so if you don't want lots of spam I recommend doing it..

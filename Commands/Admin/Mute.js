@@ -19,7 +19,7 @@ if (!args[2]){
     var unit = "second(s)";
 }
 if (!args[3]){
-    return message.channel.send("You must add a reason");
+    reason = "No reason given"
 }
 var second = 1000;
 var minute = 60 * second;
@@ -70,5 +70,5 @@ setTimeout(function2, time);
 module.exports.help = {
     name: "mute",
     aliases: [],
-    desc: "Mutes the user mentioned for a specific amount of time. You can use seconds, minutes, hours, or days. However, the limit is 24.855 days due to the 32 bit integer limit. Not my fault. Ex: jssMUTE @Jawesome Street Shark 10 days."
+    desc: "Mutes the user mentioned for a specific amount of time. You can use seconds, minutes, hours, or days. However, the limit is 24.855 days due to the 32 bit integer limit. Not my fault. Ex: jssMUTE @<user> 10 days test."
 }

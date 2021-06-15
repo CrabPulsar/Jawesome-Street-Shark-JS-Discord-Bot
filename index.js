@@ -51,10 +51,6 @@ bot.on("ready", async () => {
         title: "**Jawesome Street Shark Is Now Online**",
         timestamp: new Date(),
         color: "#00a2ff",
-        footer: {
-            text: `CrabPulsar`,
-            icon_url: "https://cdn.discordapp.com/avatars/400516451691266059/a_9dbbb94243116b708ec2bd2fe307814b.gif?size=2048"
-          }
         }
         
     // If you uncomment the next line, the bot will send a welcome mesaage when it turns on.
@@ -66,18 +62,6 @@ bot.on("message", async message => {
     // check channel type
     if (message.channel.type === "dm") return;
     if (message.author.bot) return;
-
-    // Special Word commands
-    number = 99999;
-    var random = Math.floor(Math.random() * (number - 1 + 1)) + 1;
-        switch(random) {case 69: message.channel.send('LET ME TEST MY NEW NERVE GAS'); break;}
-        
-    if (message.content.toLowerCase().split(/[\s,\?\,\.\'!]+/).some(f => f === 'sissy')){
-        message.channel.send("https://cdn.discordapp.com/attachments/658516463619145749/719084583965949972/KNOCKKNOCK.gif").then(message => message.delete({timeout: 6900}))
-    }
-    if (message.content.toLowerCase().split(/[\s,\?\,\.\'!]+/).some(f => f === 'spewin')){
-        message.channel.send("https://media.discordapp.net/attachments/570026973544316928/759833150389485608/SPEWIN.gif").then(message => message.delete({timeout: 6900}))
-    }
 
     // set prefix
     var lower = message.content.toLowerCase();

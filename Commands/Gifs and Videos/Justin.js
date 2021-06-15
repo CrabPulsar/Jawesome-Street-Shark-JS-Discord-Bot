@@ -8,7 +8,10 @@ module.exports.run = async (bot, message, args) => {
         "https://cdn.discordapp.com/attachments/570026973544316928/792658766222196756/JUSTIN.mp4",
         "https://cdn.discordapp.com/attachments/570026973544316928/792658460344582194/HIT_AND_QUIT.mp4",
         "https://cdn.discordapp.com/attachments/570026973544316928/792658373086412820/CANT_WAKE_UP.mp4",
-        "https://cdn.discordapp.com/attachments/570026973544316928/792664864027574322/download.mp4"
+        "https://cdn.discordapp.com/attachments/570026973544316928/792664864027574322/download.mp4",
+        "https://media.discordapp.net/attachments/719372088938463336/732407762646204446/smooth.gif",
+        "https://cdn.discordapp.com/attachments/655837862213713942/850426749514547210/MCnjYn0.mp4",
+        "https://cdn.discordapp.com/attachments/655837862213713942/850426836932231218/Inspirational_king.mp4"
     ]
         number = Justin.length;
         var random = Math.floor(Math.random() * (number - 1 + 1));

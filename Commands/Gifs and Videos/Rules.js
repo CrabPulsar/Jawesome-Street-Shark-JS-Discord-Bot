@@ -35,7 +35,8 @@ module.exports.run = async (bot, message, args) => {
         "https://tenor.com/view/discord-rules-rules-gif-18972022",
         "https://tenor.com/view/discord-dicord-rules-funny-lol-buff-gif-18971981",
         "https://tenor.com/view/rules-discord-gif-18060874",
-        "https://tenor.com/view/do-not-question-or-argue-with-mods-discord-moderators-staff-admin-gif-19377282"
+        "https://tenor.com/view/do-not-question-or-argue-with-mods-discord-moderators-staff-admin-gif-19377282",
+        "https://media.discordapp.net/attachments/819278767234220082/819281468462727188/final_602054c4864b4f004d1f62d2_298765_1.gif"
     ]
     number = rules.length;
         var random = Math.floor(Math.random() * (number - 1 + 1));

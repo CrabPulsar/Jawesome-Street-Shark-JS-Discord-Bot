@@ -1,6 +1,7 @@
 module.exports.run = async (bot, message, args) => {
     
     let zeb = [
+        "https://cdn.discordapp.com/attachments/570026973544316928/736822986165846036/Worshiping_Zeb_Atlas.mp4", // Matt
         "https://cdn.discordapp.com/attachments/570026973544316928/736486101505802290/Worshiping_Zeb_Atlas.mp4",
         "https://cdn.discordapp.com/attachments/743290160908861490/744288959886262452/video0.mp4",
         "https://media.discordapp.net/attachments/743183223336468565/744353947476819978/ZAB.ASSFUCK2.gif",
@@ -32,7 +33,9 @@ module.exports.run = async (bot, message, args) => {
         "https://pbs.twimg.com/media/ChnV2-tWsAAbqmJ.jpg",
         "https://cdn.discordapp.com/attachments/743183223336468565/808436386122039316/crazy_david.png",
         "https://media.discordapp.net/attachments/743183223336468565/808410416438312980/2047f65711054d15ff888b1e16ebf5cd.gif",
-        "https://cdn.discordapp.com/attachments/449029431231643668/692418009733529670/CHRISTMAS_ZEB.jpg"
+        "https://cdn.discordapp.com/attachments/449029431231643668/692418009733529670/CHRISTMAS_ZEB.jpg",
+        "https://media.discordapp.net/attachments/743183223336468565/752688234261381197/sfwzeb.gif",
+        "https://cdn.discordapp.com/attachments/743183223336468565/840831527742210058/captionasdgqaggg.png"
     ]
         number = zeb.length;
         var random = Math.floor(Math.random() * (number - 1 + 1));

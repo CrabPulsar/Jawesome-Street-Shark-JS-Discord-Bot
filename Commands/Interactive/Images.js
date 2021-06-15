@@ -18,7 +18,7 @@ if (is_number(args[args.length - 1]) == true){
     var amount = 1;
     var search = msgContent;
 }
-console.log(message.author.username + ` searched for ` +  search + ` ` + amount);
+console.log(new Date().toLocaleDateString() + " " + new Date().toLocaleTimeString() + ": " + message.author.username + ` searched for ` +  search + ` ` + amount);
 if(parseInt(amount) > 200) return message.reply("TOO MANY IMAGES STUPID!");
 const m = await message.channel.send("*Loading!!!*");
 const results = await google.scrape(search, amount);
@@ -48,4 +48,4 @@ module.exports.help = {
     desc: "This command will Google whatever you want and any number of images (20 or less). If the thing you are searching for is more than one word, DO NOT USE SPACES. Use underscores. EX: Jawesome_Street_Shark 20 This will search for the first 20 images of Jawesome Street Shark on Google. This command is pretty slow to use. The more images that you request, the longer it will take to send them all."
 }
 
-// In "node_modules\images-scraper\src\google\scraper.js" comment line number 44 if you don't want it to print to the console. I already have this file printing to the console, so if you don't want lots of spam I recommend doing it..
+// In "node_modules\images-scraper\src\google\scraper.js" comment line number 44 if you don't want it to print to the console. I already have this file printing to the console, so if you don't want lots of spam I recommend doing it.

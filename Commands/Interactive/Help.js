@@ -2,7 +2,7 @@ const index = require("../../index.js");
 const random = require('../../Helper Functions/Random Color');
 module.exports.run = async (bot, message, args) =>{
     if (!args[0]){
-        return message.reply("What command do you need help with? Try using jssc to see the list of recognized commands.")
+        return message.reply("What command do you need help with? Try using jssc to see the list of recognized commands. You can also use jsshelp <name of command> to get help on a specific command.")
     }
     var initialLength = index.currentPrefix.length
     var input = `${message.content}`.toLowerCase().slice(initialLength + 4).trim()

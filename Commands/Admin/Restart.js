@@ -1,6 +1,7 @@
 const open = require('open');
+const botconfig = require('../../botconfig.json').ownerID;
+
 module.exports.run = async (bot, message, args) => {
-const botconfig = require('../../botconfig.json');
 if (message.author.id != botconfig.ownerID){
     return
 }

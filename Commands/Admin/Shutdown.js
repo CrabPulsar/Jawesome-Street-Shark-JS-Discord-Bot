@@ -1,4 +1,4 @@
-const ownerID = require('../../botconfig.json')
+const ownerID = require('../../botconfig.json').ownerID;
 module.exports.run = async (bot, message, args) => {
     if (message.author.id != ownerID){
         return

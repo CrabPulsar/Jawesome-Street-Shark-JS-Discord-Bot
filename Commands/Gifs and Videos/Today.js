@@ -21,7 +21,13 @@ module.exports.run = async (bot, message, args) => {
             var random = Math.floor(Math.random() * (Thurnumber - 1 + 1));
             var gif = Thursday[random];
             break;
-        case 5: var gif = "Friday"; break;
+        case 5: Friday = [
+            "https://cdn.discordapp.com/attachments/760154995650854952/944379340265750638/trim.02F84620-C719-4770-924E-627CAB687A5D.mov"
+            ];
+            Frinumber = Friday.length;
+            var random = Math.floor(Math.random() * (Frinumber - 1 + 1));
+            var gif = Friday[random];
+            break;
         case 6: Saturday = [
             "https://cdn.discordapp.com/attachments/403698796099272704/779764864175702066/video0.mp4"
         ]

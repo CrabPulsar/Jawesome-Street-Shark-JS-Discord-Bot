@@ -21,12 +21,12 @@ var query_params = {
   'limit' : 1
 }
 
-let queryString = querystring.stringify(query_params);
+let queryString = URLSearchParams.stringify(query_params);
 
 try {
 
   let _url = CAT_API_URL + `v1/images/search?${queryString}`;
-
+  console.log(_url)
   var response = await r2.get(_url , {headers} ).json
 } catch (e) {
 }

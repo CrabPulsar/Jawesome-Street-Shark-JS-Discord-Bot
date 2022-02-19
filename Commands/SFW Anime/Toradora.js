@@ -1,6 +1,6 @@
 module.exports.run = async (bot, message, args) =>{
     message.delete();
-    message.channel.send(`https://cdn.discordapp.com/attachments/658516463619145749/724768703094456350/Toradora.mp4`);
+    message.channel.send(`https://cdn.discordapp.com/attachments/570026973544316928/837192547053862912/Toradora_Ending_But_It_Never_Fully_Starts.mp4`);
 }
 
 module.exports.help = {

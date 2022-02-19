@@ -120,5 +120,5 @@ module.exports.run = async (bot, message, args) => {
 module.exports.help = {
     name: "mute",
     aliases: [],
-    desc: "Mutes the user mentioned for a specific amount of time. You can use seconds, minutes, hours, or days. However, the limit is 24.855 days due to the 32 bit integer limit. Not my fault. Ex: jssMUTE @<user> 10 days test."
+    desc: "Mutes the user mentioned for a specific amount of time. You can use seconds, minutes, hours, or days. Ex: jssMUTE @<user> 10 days test."
 }

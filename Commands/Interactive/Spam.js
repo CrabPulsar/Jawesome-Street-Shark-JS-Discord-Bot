@@ -20,7 +20,7 @@ module.exports.run = async (bot, message, args) =>{
     message.delete();
     }
 module.exports.help = {
-name: "spam",
-aliases: [],
-desc: "This command will repeat the message you put in and the amount, however there is a 50 message limit. EX: Jawesome 10 ===> Jawesome Jawesome Jawesome Jawesome Jawesome Jawesome Jawesome Jawesome Jawesome Jawesome."
+    name: "spam",
+    aliases: [],
+    desc: "This command will repeat the message you put in and the amount, however there is a 50 message limit. EX: Jawesome 10 ===> Jawesome Jawesome Jawesome Jawesome Jawesome Jawesome Jawesome Jawesome Jawesome Jawesome."
 }

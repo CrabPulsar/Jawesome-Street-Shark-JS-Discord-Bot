@@ -38,7 +38,7 @@ module.exports.run = async (bot, message, args) =>{
             message.channel.send("No more images are available. Found " + results.length + " images out of " + amount)
             break;
         };
-        var pic = results[counter];     
+        var pic = results[counter];
         const iEmbed = {
             color: colors["hotpink"],
             image: pic

@@ -42,5 +42,3 @@ module.exports.help = {
     aliases: ["bot"],
     desc: "Displays information about the bot."
 }
-
-// Code used from this github: https://github.com/MenuDocs/Discord.js-v12-Tutorials

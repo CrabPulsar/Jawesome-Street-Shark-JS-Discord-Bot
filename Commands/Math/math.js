@@ -20,6 +20,6 @@ message.channel.send(embed)
     
     module.exports.help = {
         name: "math",
-        aliases: [],
+        aliases: ["m"],
         desc: "Calculates the basic mathematical functions and can do derivatives."
     }

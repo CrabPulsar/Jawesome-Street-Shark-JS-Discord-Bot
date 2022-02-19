@@ -1,21 +1,18 @@
 module.exports.run = async (bot, message, args) => {
-    if(!message.member.hasPermission('ADMINISTRATOR')) return message.channel.send("NO");
-    var time = process.uptime();
-if (time < 60) {
-    message.channel.send(time + " second(s)");
-} else if (time >= 60 && time < 3600) {
-    var minutes = time/60
-    message.channel.send(minutes + " minute(s)");
-} else if (time >= 3600 && time < 86400) {
-    var hours = time/3600
-    message.channel.send(hours + " hour(s)");
-} else if (time >= 86400) {
-    var days = time/86400
-    message.channel.send(days + " day(s)");
+    if(!message.member.hasPermission('ADMINISTRATOR')) return;
+    let seconds = Math.floor(message.client.uptime / 1000);
+    let minutes = Math.floor(seconds / 60);
+    let hours = Math.floor(minutes / 60);
+    let days = Math.floor(hours / 24);
+
+    seconds %= 60;
+    minutes %= 60;
+    hours %= 24;
+    message.channel.send("Uptime: `" + days + " Day(s), " + hours + " Hour(s), " + minutes + " Minutes(s), " + seconds + " Second(s) " + "`")
 }
-    }
-    module.exports.help = {
+
+module.exports.help = {
         name: "uptime",
         aliases: [],
         desc: "Sends the amount of time that the bot has been running."
-    }
+}

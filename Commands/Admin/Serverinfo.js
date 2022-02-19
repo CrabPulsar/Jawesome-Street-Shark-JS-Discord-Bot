@@ -84,5 +84,3 @@ module.exports.help = {
 	aliases: ["si"],
 	desc: "Displays information about the server that said message was run in."
 }
-
-// Code used from this github: https://github.com/MenuDocs/Discord.js-v12-Tutorials

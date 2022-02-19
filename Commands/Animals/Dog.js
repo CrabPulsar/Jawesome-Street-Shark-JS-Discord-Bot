@@ -7,7 +7,7 @@ module.exports.run = async (bot, message, args) =>{
 var images = await loadImage(message.author.username);
 var image = images[0];
 var breed = image.breeds[0];
-message.channel.send("***Breed:   "+breed.name+"***\r*Temperment:   "+breed.temperament+"*\r*Bred For:   "+breed.bred_for+"*", {files: [ image.url ] });
+message.channel.send("***Breed:   "+breed.name+"***\r*Temperament:   "+breed.temperament+"*\r*Bred For:   "+breed.bred_for+"*", {files: [ image.url ] });
 async function loadImage(sub_id)
 {
   var headers = {
@@ -36,5 +36,5 @@ return response;
 module.exports.help = {
     name: "dog",
     aliases: [],
-    desc: "This command will return random images of dogs along with their breed, the reason they were bred, and thier temperance. (This command is powered by https://api.thedogapi.com)"
+    desc: "This command will return random images of dogs along with their breed, the reason they were bred, and their temperance. (This command is powered by https://api.thedogapi.com)"
 }

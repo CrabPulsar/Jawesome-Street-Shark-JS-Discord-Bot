@@ -4,10 +4,8 @@ const CAT_API_URL   = "https://api.thecatapi.com/"
 const CAT_API_KEY   = require('../../botconfig.json');
 
 module.exports.run = async (bot, message, args) =>{
-var images = await loadImage(message.author.username);
-var image = images[0];
-var breed = image.breeds[0];
-message.channel.send("***"+breed.name+"***\r*"+breed.temperament+"*", {files: [ image.url ] });
+var result = await loadImage(message.author.username);
+message.channel.send(result[0].url);
 async function loadImage(sub_id)
 {
   var headers = {
@@ -21,12 +19,11 @@ var query_params = {
   'limit' : 1
 }
 
-let queryString = URLSearchParams.stringify(query_params);
+let queryString = querystring.stringify(query_params);
 
 try {
 
   let _url = CAT_API_URL + `v1/images/search?${queryString}`;
-  console.log(_url)
   var response = await r2.get(_url , {headers} ).json
 } catch (e) {
 }

@@ -94,4 +94,6 @@ bot.on("message", async message => {
         return;
     }
 })
+bot.on("warn", (info) => console.log(info));
+bot.on("error", console.error);
 bot.login(botconfig.token);

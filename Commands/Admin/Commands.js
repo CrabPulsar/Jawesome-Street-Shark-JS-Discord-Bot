@@ -4,7 +4,7 @@ const Comembed = {
             title: "Commands",
             fields: [
               {name: "**Admin:**",
-              value: "• Botinfo {bot}\n• Commands {c}\n• Delete (#<100) {d}\n• Mute\n• Ping\n• Roles\n• ServerInfo {si}\n• Unmute\n• Uptime",
+              value: "• Botinfo {bot}\n• Commands {c}\n• Delete {d}\n• Mute\n• Ping\n• Roles\n• ServerInfo {si}\n• Unmute\n• Uptime",
               inline: true},
 
               {name: "**Animals:**",

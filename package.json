@@ -1,31 +1,29 @@
 {
-  "name": "jawesome_street_shark",
-  "version": "1.10.10",
+  "name": "dicord_bot",
+  "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "dependencies": {
     "canvas": "^2.8.0",
     "discord.js": "^12.5.1",
     "fs": "^0.0.1-security",
-    "images-scraper": "^5.0.7",
     "mathjs": "^7.6.0",
     "moment": "^2.29.1",
     "ms": "^2.1.2",
     "nekos.life": "^2.0.7",
-    "node-fetch": "^2.6.1",
     "open": "^7.4.2",
     "os": "^0.1.1",
     "path": "^0.12.7",
+    "pm2": "^5.4.3",
     "query-string": "^6.14.1",
     "r2": "^2.0.1",
     "random-anime": "^1.0.6",
     "random-cat": "^1.0.1"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "CrabPulsar#2176",
+  "author": "",
   "license": "ISC"
 }

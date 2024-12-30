@@ -4,23 +4,17 @@ const fs = require("fs");
 
 module.exports.run = async (bot, message, args) => {
     if (message.author.id != botconfig.ownerID) return
-    var msg = `${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()}: ${message.content.slice(index.currentPrefix.length + 5)}\n`;
+    var msg = new Date().toLocaleDateString() + " " + new Date().toLocaleTimeString() + ": " + message.content.slice(index.currentPrefix.length + 5) + "\n";
     if (fs.existsSync("./Logs/saveLogs.txt")) {
         fs.appendFile('./Logs/saveLogs.txt', msg, function (err) {
             if (err) throw err;
         });
-    } else{
-        fs.mkdir("./Logs", (err) => {
-            if (err){
-                return console.log(err);
-            }
-        });
+    }
+    else {
         fs.writeFile('./Logs/saveLogs.txt', msg, function (err) {
             if (err) throw err;
         });
     }
-
-
     message.delete()
     message.reply(`Successfully saved ${msg}`)
 }
@@ -28,5 +22,5 @@ module.exports.run = async (bot, message, args) => {
 module.exports.help = {
     name: "save",
     aliases: [],
-    desc: "Saves user input."
+    desc: "Saves userinput."
 }

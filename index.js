@@ -2,6 +2,7 @@ const Discord = require('discord.js');
 const bot = new Discord.Client({disableEveryone: true});
 const botconfig = require("./botconfig.json");
 const fs = require("fs");
+const path = require("path");
 bot.commands = new Discord.Collection();
 bot.aliases = new Discord.Collection();
 
@@ -41,6 +42,16 @@ while (filePath.length > 0){
 }
 module.exports.namedFileDescription = namedFileDescription
 module.exports.aliasFileDescription = aliasFileDescription
+
+if (fs.existsSync("./temp_images") == false) {
+    fs.mkdir(path.join(__dirname, './temp_images'),
+        (err) => {
+            if (err) {
+                return console.error(err);
+            }
+            console.log('Directory created successfully!');
+        }); 
+}
 
 // bot online message and activity message
 bot.on("ready", async () => {

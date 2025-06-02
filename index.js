@@ -8,9 +8,9 @@ bot.aliases = new Discord.Collection();
 // read Commands folder
 const namedFileDescription = new Map()
 const aliasFileDescription = new Map()
-const filePath = fs.readdirSync("./commands")
+const filePath = fs.readdirSync("./Commands")
 function readFiles(set){
-    fs.readdir(`./commands/${set}`, (err, files) => {
+    fs.readdir(`./Commands/${set}`, (err, files) => {
         if (err) console.log(err);
         let jsfile = files.filter(f => f.split(".").pop() === "js")
         if (jsfile.length <= 0) {
@@ -18,7 +18,7 @@ function readFiles(set){
             return;
         }
         jsfile.forEach((f) => {
-            let props = require(`./commands/${set}/${f}`);
+            let props = require(`./Commands/${set}/${f}`);
             console.log(`${f} loaded!`);
             namedFileDescription.set(f.slice(0, -3).toLowerCase(), `${props.help.desc}`)
             if (props.help.aliases){

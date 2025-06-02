@@ -64,7 +64,7 @@ bot.on("ready", async () => {
         color: "#00a2ff",
         }
         
-    // If you uncomment the next line, the bot will send a welcome mesaage when it turns on.
+    // If you uncomment the next line, the bot will send a welcome message when it turns on.
     //bot.channels.cache.find(channel => channel.name === 'general').send({embed: oEmbed}).then(message => message.delete({timeout: 10000}));
 })
 
